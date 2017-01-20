@@ -111,7 +111,7 @@ public class NetworkCard {
 
             try {
                 while (true) {
-                    int sleepTime = 15000;
+                    int sleepTime = 18000;
 
                     // Get DataFrame from outputQueue to transmit.
                     // Also check if frame is an ACK, before we decide to process it or not.
@@ -145,7 +145,7 @@ public class NetworkCard {
                             } else if ((ackReceived[0] & 0xFF) == 0x7E) {
                                 System.out.println("No confirmation received, retransmitting.");
 //                                num += 0.2;
-                                thresholdVoltage += 0.1;
+//                                thresholdVoltage += 0.1;
                                 System.out.println("tresholdVoltage raised to: " + thresholdVoltage);
 
                                 transmitFrame(packet);
@@ -168,7 +168,27 @@ public class NetworkCard {
          */
         public void transmitFrame(DataFrame frame) throws InterruptedException {
 
+            int overThresholdCount;
             // Attempt to eliminate noise before transmitting the frame.
+            do {
+                overThresholdCount = 0;
+                int timeAnalysed = 0;
+                int sleepIncrement = PULSE_WIDTH / 40;
+                int sleepTime = 1000; // ms
+
+                while (timeAnalysed < sleepTime) {
+
+                    if (wire.getVoltage(deviceName) < thresholdVoltage) {
+                        sleep(sleepIncrement);
+                    } else {
+                        overThresholdCount++;
+                    }
+                    timeAnalysed += sleepIncrement;
+                }
+
+                thresholdVoltage += 0.025;
+                System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
+            } while (overThresholdCount > 0);
 
 
             if (frame != null) {
@@ -196,13 +216,6 @@ public class NetworkCard {
             }
         }
 
-        private void transmitAck(DataFrame frame) throws InterruptedException {
-
-            if (frame != null) {
-                System.out.println("This is an ACK frame");
-            }
-
-        }
 
         private void transmitByte(byte value) throws InterruptedException {
 
@@ -370,9 +383,31 @@ public class NetworkCard {
 
                         // This could possibly be because there is too much noise.
                         // Try raising the thresholdVoltage.
-                        thresholdVoltage += 0.1;
-                        System.out.println("Changing threshold at invalid checksum at card: " +
-                                "\n " + deviceName + "\n" + thresholdVoltage);
+//                        thresholdVoltage += 0.1;
+//                        System.out.println("Changing threshold at invalid checksum at card: " +
+//                                "\n " + deviceName + "\n" + thresholdVoltage);
+                        int overThresholdCount;
+
+                        // Attempt to eliminate noise before transmitting the frame.
+                        do {
+                            overThresholdCount = 0;
+                            int timeAnalysed = 0;
+                            int sleepIncrement = PULSE_WIDTH / 40;
+                            int sleepTime = 1000; // ms
+
+                            while (timeAnalysed < sleepTime) {
+
+                                if (wire.getVoltage(deviceName) < thresholdVoltage) {
+                                    sleep(sleepIncrement);
+                                } else {
+                                    overThresholdCount++;
+                                }
+                                timeAnalysed += sleepIncrement;
+                            }
+
+                            thresholdVoltage += 0.025;
+                            System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
+                        } while (overThresholdCount > 0);
 
                     }
 
@@ -507,5 +542,28 @@ public class NetworkCard {
         return new DataFrame(payloadWithChecksum);
     }
 
+//    private void adjustThresholdVoltage() {
+//        int overThresholdCount;
+//        // Attempt to eliminate noise before transmitting the frame.
+//        do {
+//            overThresholdCount = 0;
+//            int timeAnalysed = 0;
+//            int sleepIncrement = PULSE_WIDTH / 20;
+//            int sleepTime = 3000; // ms
+//
+//            while (timeAnalysed < sleepTime) {
+//
+//                if (wire.getVoltage(deviceName) < thresholdVoltage) {
+//                    sleep(sleepIncrement);
+//                } else {
+//                    overThresholdCount++;
+//                }
+//                timeAnalysed += sleepIncrement;
+//            }
+//
+//            thresholdVoltage += 0.05;
+//            System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
+//        } while (overThresholdCount > 0);
+//    }
 
 }
