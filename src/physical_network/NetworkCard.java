@@ -170,25 +170,7 @@ public class NetworkCard {
 
             int overThresholdCount;
             // Attempt to eliminate noise before transmitting the frame.
-            do {
-                overThresholdCount = 0;
-                int timeAnalysed = 0;
-                int sleepIncrement = PULSE_WIDTH / 40;
-                int sleepTime = 1000; // ms
-
-                while (timeAnalysed < sleepTime) {
-
-                    if (wire.getVoltage(deviceName) < thresholdVoltage) {
-                        sleep(sleepIncrement);
-                    } else {
-                        overThresholdCount++;
-                    }
-                    timeAnalysed += sleepIncrement;
-                }
-
-                thresholdVoltage += 0.025;
-                System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
-            } while (overThresholdCount > 0);
+            adjustThresholdVoltage(this);
 
 
             if (frame != null) {
@@ -386,28 +368,9 @@ public class NetworkCard {
 //                        thresholdVoltage += 0.1;
 //                        System.out.println("Changing threshold at invalid checksum at card: " +
 //                                "\n " + deviceName + "\n" + thresholdVoltage);
-                        int overThresholdCount;
 
+                        adjustThresholdVoltage(this);
                         // Attempt to eliminate noise before transmitting the frame.
-                        do {
-                            overThresholdCount = 0;
-                            int timeAnalysed = 0;
-                            int sleepIncrement = PULSE_WIDTH / 40;
-                            int sleepTime = 1000; // ms
-
-                            while (timeAnalysed < sleepTime) {
-
-                                if (wire.getVoltage(deviceName) < thresholdVoltage) {
-                                    sleep(sleepIncrement);
-                                } else {
-                                    overThresholdCount++;
-                                }
-                                timeAnalysed += sleepIncrement;
-                            }
-
-                            thresholdVoltage += 0.025;
-                            System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
-                        } while (overThresholdCount > 0);
 
                     }
 
@@ -542,28 +505,28 @@ public class NetworkCard {
         return new DataFrame(payloadWithChecksum);
     }
 
-//    private void adjustThresholdVoltage() {
-//        int overThresholdCount;
-//        // Attempt to eliminate noise before transmitting the frame.
-//        do {
-//            overThresholdCount = 0;
-//            int timeAnalysed = 0;
-//            int sleepIncrement = PULSE_WIDTH / 20;
-//            int sleepTime = 3000; // ms
-//
-//            while (timeAnalysed < sleepTime) {
-//
-//                if (wire.getVoltage(deviceName) < thresholdVoltage) {
-//                    sleep(sleepIncrement);
-//                } else {
-//                    overThresholdCount++;
-//                }
-//                timeAnalysed += sleepIncrement;
-//            }
-//
-//            thresholdVoltage += 0.05;
-//            System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
-//        } while (overThresholdCount > 0);
-//    }
+    private void adjustThresholdVoltage(Thread thread) throws InterruptedException{
+        int overThresholdCount;
+        // Attempt to eliminate noise before transmitting the frame.
+        do {
+            overThresholdCount = 0;
+            int timeAnalysed = 0;
+            int sleepIncrement = PULSE_WIDTH / 50;
+            int sleepTime = 500; // ms
+
+            while (timeAnalysed < sleepTime) {
+
+                if (wire.getVoltage(deviceName) < thresholdVoltage) {
+                    thread.sleep(sleepIncrement);
+                } else {
+                    overThresholdCount++;
+                }
+                timeAnalysed += sleepIncrement;
+            }
+
+            thresholdVoltage += 0.02;
+            System.out.println(deviceName +" thresholdVoltage is: " + thresholdVoltage);
+        } while (overThresholdCount > 0);
+    }
 
 }

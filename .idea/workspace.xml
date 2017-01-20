@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="446" />
+    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="409" />
     <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="112" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="530" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="420" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="493" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="383" mnemonic="4" />
     <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="168" mnemonic="5" />
-    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="385" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java" line="367" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8b7b6e7-6d4f-4df6-b64f-a400a50cc821" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/Main.class" afterPath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/NetworkCard$RXThread.class" afterPath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/NetworkCard$RXThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/NetworkCard$TXThread.class" afterPath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/NetworkCard$TXThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/NetworkCard.class" afterPath="$PROJECT_DIR$/out/production/COMP201P_Coursework/physical_network/NetworkCard.class" />
@@ -32,10 +31,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physical_network/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
+            <state relative-caret-position="96">
               <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
               <folding />
             </state>
@@ -55,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetworkCard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NetworkCard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="407" column="53" lean-forward="false" selection-start-line="407" selection-start-column="53" selection-end-line="407" selection-end-column="53" />
+            <state relative-caret-position="251">
+              <caret line="526" column="36" lean-forward="false" selection-start-line="526" selection-start-column="36" selection-end-line="526" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -109,8 +108,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/physical_network/NetworkCardOriginal.java" />
         <option value="$PROJECT_DIR$/src/physical_network/DataFrame.java" />
-        <option value="$PROJECT_DIR$/src/physical_network/Main.java" />
         <option value="$PROJECT_DIR$/src/physical_network/NetworkCard.java" />
+        <option value="$PROJECT_DIR$/src/physical_network/Main.java" />
       </list>
     </option>
   </component>
@@ -121,7 +120,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
+    <option name="width" value="683" />
     <option name="height" value="749" />
   </component>
   <component name="ProjectView">
@@ -630,15 +629,15 @@
       <workItem from="1484596062114" duration="78647000" />
       <workItem from="1484779656511" duration="13426000" />
       <workItem from="1484846034790" duration="31697000" />
-      <workItem from="1484939300636" duration="3735000" />
+      <workItem from="1484939300636" duration="6240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127505000" />
+    <option name="totallyTimeSpent" value="130010000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="749" extended-state="0" />
+    <frame x="0" y="0" width="683" height="749" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -651,12 +650,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48765433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="275" width="1362" height="165" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37654322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="275" width="1362" height="165" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24889868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4992636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -689,13 +688,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/physical_network/NetworkCard.java</url>
-          <line>336</line>
+          <line>318</line>
           <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/physical_network/NetworkCard.java</url>
-          <line>338</line>
+          <line>320</line>
           <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
@@ -1156,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physical_network/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -1185,8 +1176,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physical_network/NetworkCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="407" column="53" lean-forward="false" selection-start-line="407" selection-start-column="53" selection-end-line="407" selection-end-column="53" />
+        <state relative-caret-position="251">
+          <caret line="526" column="36" lean-forward="false" selection-start-line="526" selection-start-column="36" selection-end-line="526" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physical_network/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
           <folding />
         </state>
       </provider>
